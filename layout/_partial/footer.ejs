@@ -1,0 +1,14 @@
+<footer id="footer">
+  <% if (theme.sidebar === 'bottom'){ %>
+    <%- partial('_partial/sidebar') %>
+  <% } %>
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <% if (theme.copyright){ %>
+        <%- render(theme.copyright, 'pug'); %>
+      <% } %>
+      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+      <%= __('Visit the   ') %> <a href="https://www.subplay.xyz/" target="_blank"> website</a>
+    </div>
+  </div>
+</footer>
